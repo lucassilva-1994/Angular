@@ -1,0 +1,17 @@
+
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>{{card.name}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="card.pic" alt="Photo of a Shiba Inu" class="image-card">
+    <mat-card-content class="content">
+      <p>
+        {{card.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions class="footer-card">
+      <button mat-button (click)="onLike(card)" 
+      buttoncostume [likes]= "card.likes">LIKE {{card.likes}}</button>
+      <button mat-button (click) = "onShare()">SHARE</button>
+    </mat-card-actions>
+  </mat-card>
